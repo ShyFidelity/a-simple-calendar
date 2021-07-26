@@ -1,4 +1,4 @@
-var saveBtn = $('#saveBtn');
+// var saveBtn = $('#saveBtn');
 var taskInput = $('#user-input');
 var timeDisplayEl = $('#current-day');
 
@@ -32,11 +32,11 @@ for (let i = 0; i < hours.length; i++) {
 }
 
 
-
-// saveInput.on('submit', saveInput);
-
-   
-//     $(".saveBtn").on("click", function (){
-
-//         var userInput = $('input[name="user-input"]').val;
-//         localStorage.setItem(userInput)
+  
+$(".saveBtn").on("click", function (){
+console.log("I'm saved")
+console.log(saveInput)
+    var userInput = $('input[name="user-input"]').val;
+    localStorage.setItem(userInput.attr('userInput'), JSON.stringify(userInput).val())
+    
+});
